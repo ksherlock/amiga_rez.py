@@ -1,6 +1,5 @@
-Quick-n-dirty python module to read (some) amiga resource files.
+Quick-n-dirty python module to read (some) Amiga resource files.
 
-Apparently there are loats of file formats for Amiga resource files.
+Apparently there are lots of file formats for Amiga resource files.
 
 This is the one I was interested in.
-
