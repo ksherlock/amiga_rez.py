@@ -104,6 +104,8 @@ class Resource:
 
 class AmigaResource:
 	"""docstring for AmigaResource"""
+	__slots__ = '_types', 
+
 	def __init__(self, file):
 		data = None
 		with io.open(file, "rb") as f:
@@ -138,7 +140,7 @@ class AmigaResource:
 
 			for n in range(0, count):
 				# 12 bytes, 3rd word unknown
-				rid, addr, _ = unpack_from(">III", data, offset=offset) ; offset += 12
+				rid, _, addr, _ = unpack_from(">HHII", data, offset=offset) ; offset += 12
 				addr &= 0x00ffffff # high byte flags?
 				addr += 256
 

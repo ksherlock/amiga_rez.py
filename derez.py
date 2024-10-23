@@ -79,7 +79,7 @@ def hexdump(data):
 
 def dump(type, id, data):
 
-	print("resource '{}' (${:x}) {{".format(type.decode('ascii'), id))
+	print("resource '{}' (${:04x}) {{".format(type.decode('ascii'), id))
 
 	if type == b'CStr':
 		if (is_cstr(data)):
